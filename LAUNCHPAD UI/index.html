@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> LaunchPad UI || by Satyajit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/animations.css">
+  <link rel="stylesheet" href="src/css/responsive.css">
+  <link rel="stylesheet" href="src/css/darkTheme.css">
+  <link rel="icon" type="image/png" href="src/favicon.ico">
+</head>
+<body>
+ 
+ <div class="loader-container" id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <div class="content" id="content">
+    <div class="search-container">
+      <i class="fab fa-google search-icon"></i>
+      <input type="text" class="search-input" id="google-search" placeholder="Search in Google" aria-label="Google Search">
+      <button class="search-btn" id="search-button" aria-label="Search"><i class="fas fa-search"></i></button>
+      <button class="voice-btn" id="voice-btn" aria-label="Voice Search"><i class="fas fa-microphone"></i></button>
+      <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+      <div class="profile-icon" title="Profile"><i class="fas fa-user"></i></div>
+    </div>
+    
+    <div class="container" id="card-container">
+      <!-- Time Card -->
+      <div class="card" id="card1">
+        <div class="indicator blue"></div>
+        <div class="card-title">Local Time</div>
+        <div class="time" id="current-time">--:--</div>
+        <div class="date" id="current-date">--/--/----</div>
+      </div>
+      
+      <!-- Reminders Card -->
+      <div class="card light-green" id="card2">
+        <div class="indicator green"></div>
+        <div class="card-title">Reminders</div>
+        <div class="task-container">
+          <div style="display: flex; align-items: center;">
+            <input type="checkbox" class="task-checkbox" disabled>
+            <input type="text" class="task-input" id="main-task-input" placeholder="Add a task...">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quote Card -->
+      <div class="card" id="card3">
+        <div class="indicator orange"></div>
+        <div class="card-title">Daily Quote</div>
+        <div class="quote" id="daily-quote">Inspiration goes here...</div>
+      </div>
+      
+      <!-- Weather Card -->
+      <div class="card light-green" id="card4">
+        <div class="indicator blue"></div>
+        <div class="card-title">Weather</div>
+        <div class="city">City: <span id="weather-city">Loading...</span></div>
+        <div class="temp"><span id="weather-temp">--</span></div>
+        <div id="weather-icon" style="margin-top: 10px; font-size: 24px; color: var(--accent-blue);">
+          <i class="fas fa-cloud"></i>
+        </div>
+      </div>
+      
+      <!-- Quick Apps -->
+      <div class="card" id="card5">
+        <div class="indicator green"></div>
+        <div class="card-title">Quick Apps</div>
+        <div class="quick-apps">
+          <button class="app-btn youtube" title="YouTube">
+            <div class="app-icon"><i class="fa-brands fa-youtube fa-fade"></i></div>YouTube
+          </button>
+          <button class="app-btn github" title="GitHub">
+            <div class="app-icon"><i class="fa-brands fa-github fa-fade"></i></div>GitHub
+          </button>
+          <button class="app-btn linkedin" title="LinkedIn">
+            <div class="app-icon"><i class="fa-brands fa-linkedin-in fa-fade"></i></div>LinkedIn
+          </button>
+          <button class="app-btn instagram" title="Instagram">
+            <div class="app-icon"><i class="fa-brands fa-instagram fa-fade"></i></div>Instagram
+          </button>
+          <button class="app-btn twitter" title="Twitter">
+            <div class="app-icon"><i class="fa-brands fa-twitter fa-fade"></i></div>Twitter
+          </button>
+          <button class="app-btn stackoverflow" title="Stackoverflow">
+            <div class="app-icon"><i class="fa-brands fa-stack-overflow fa-fade"></i></div>Stack Overflow
+          </button>
+          <button class="app-btn whatsapp" title="whatsapp">
+            <div class="app-icon"><i class="fa-brands fa-whatsapp fa-fade"></i></div>Whatsapp
+          </button>
+          <button class="app-btn codepen" title="CodePen">
+            <div class="app-icon"><i class="fa-brands fa-codepen fa-fade"></i></div>Code Pen
+          </button>
+        </div>
+      </div>
+      
+      <!-- News -->
+      <div class="card gallery-card" id="news-card">
+        <div class="indicator orange"></div>
+        <h3><i class="fas fa-newspaper"></i> Tech News</h3>
+        <ul id="news-list">
+          <li>Loading news...</li>
+        </ul>
+      </div>
+    </div>
+  
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="src/js/script.js"></script>
+</html>
